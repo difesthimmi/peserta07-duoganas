@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.list {
+  @apply mb-2 md:mr-8 md:mb-0 font-[500];
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-black transition duration-300 ease-in-out;
+}
+
+.sign-up {
+  background: linear-gradient(130.1deg, #e21c34 16.44%, #50052b 129.19%);
+  font-weight: 500;
+}
+
+.home {
+  background: linear-gradient(130.1deg, #e21c34 16.44%, #50052b 129.19%);
+  border-radius: 25px 25px 200px 25px;
+}
+
+.gradien {
+  background: linear-gradient(130.1deg, #e21c34 16.44%, #50052b 129.19%);
+  border-radius: 25px;
+}
+
+.footer {
+  border-bottom: 1px solid black;
+  padding-bottom: 32px;
+}
+img {
+  max-width: 100%;
+}
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+.reveal.active {
+  opacity: 1;
+}
+
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+
+section#home {
+  animation: fade-left 1s ease-in;
+}
+
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
